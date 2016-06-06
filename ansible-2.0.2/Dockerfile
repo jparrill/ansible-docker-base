@@ -6,4 +6,4 @@ RUN yum clean all && \
     yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
 RUN mkdir /etc/ansible/
 RUN echo -e '[local]\nlocalhost' > /etc/ansible/hosts
-RUN pip install ansible==2.0.2
+RUN pip install ansible==2.0.2 ansible-lint
