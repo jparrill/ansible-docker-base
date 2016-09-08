@@ -1,5 +1,8 @@
 Ansible-Docker-Base
 ===================
+[![](https://images.microbadger.com/badges/image/padajuan/ansible-docker-base.svg)](http://microbadger.com/images/padajuan/ansible-docker-base)
+
+[![](https://images.microbadger.com/badges/license/padajuan/ansible-docker-base.svg)](http://microbadger.com/images/padajuan/ansible-docker-base)
 
 Docker containers for different Ansible versions.
 
