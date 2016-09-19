@@ -11,7 +11,12 @@ The image purpose is related to make different tests with different versions of 
 
 Also there is official images of it, just check the [URLs](https://hub.docker.com/search/?q=ansible&page=1&isAutomated=0&isOfficial=0&pullCount=1&starCount=0)
 
-### Why not different Virtual Envs?
+## Features added
+Installed new packages with pip to allow testing on destination nodes.
+- ansible-lint
+- testinfra (to use ansible as a backend)
+
+## Why not different Virtual Envs?
 If your base release are Ansible 2.0 you cannot install a 1.9 version of Ansible because it Dependency libraries
 
 Hope this be useful for you.

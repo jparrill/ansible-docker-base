@@ -7,4 +7,4 @@ RUN yum clean all && \
     yum clean all && \
     mkdir /etc/ansible/ && \
     echo -e '[local]\nlocalhost' > /etc/ansible/hosts
-RUN pip install ansible==1.9.4 ansible-lint
+RUN pip install ansible==1.9.4 ansible-lint testinfra
