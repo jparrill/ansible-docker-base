@@ -15,6 +15,7 @@ Also there is official images of it, just check the [URLs](https://hub.docker.co
 Installed new packages with pip to allow testing on destination nodes.
 - ansible-lint
 - testinfra (to use ansible as a backend)
+- python-shade modules to manage openstack
 
 ## Why not different Virtual Envs?
 If your base release are Ansible 2.0 you cannot install a 1.9 version of Ansible because it Dependency libraries
