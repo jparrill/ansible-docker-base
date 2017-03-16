@@ -14,4 +14,4 @@ RUN git submodule update --init
 ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin
 ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
-RUN pip install ansible-lint testinfra
+RUN pip install ansible-lint testinfra etcd
