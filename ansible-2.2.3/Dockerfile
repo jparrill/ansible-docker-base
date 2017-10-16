@@ -8,4 +8,4 @@ RUN yum clean all && \
     yum clean all && \
     mkdir /etc/ansible/ && \
     echo -e '[local]\nlocalhost' > /etc/ansible/hosts
-RUN pip install ansible==2.2.3 ansible-lint testinfra shade etcd
+RUN pip install ansible==2.2.3 ansible-lint testinfra shade etcd molecule
