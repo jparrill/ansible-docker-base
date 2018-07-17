@@ -27,3 +27,5 @@ Enjoy!.
 ## Update
 
 Spec files revamped, now the __builder.py__ script based will get all ansible versions from pip and create the Dockerfiles in the proper folder waiting for a DockerHub build.
+
+Hope this help
