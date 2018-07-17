@@ -3,20 +3,14 @@ FROM {{ os_name }}:{{ os_version }}
 MAINTAINER Juan Manuel Parrilla <jparrill@redhat.com>
 
 RUN {{ pkg_manager }} clean all && \
-    {% if os_name == 'rhel' %}
-    yum -y update-minimal --disablerepo "*" --enablerepo rhel-7-server-rpms --setopt=tsflags=nodocs --security --sec-severity=Important --sec-severity=Critical && \
-    {% else %}
-    {{ pkg_manager }} update -y && \
-    {% endif %}
     {% if os_name == 'centos' %}
     {{ pkg_manager }} install -y epel-release && \
     {% endif %}
-    {% if os_name == 'rhel' %}
-    {{ pkg_manager }} -y install --disablerepo "*" --enablerepo rhel-7-server-rpms --setopt=tsflags=nodocs {{ os_packages }} && \
-    easy_install pip && \
-    {% else %}
     {{ pkg_manager }} install -y {{ os_packages }} && \
-    {% endif %}
+    {{ pkg_manager }} install -y {{ os_dependencies }} && \
     {{ pkg_manager }} clean all
+
+RUN mkdir /etc/ansible/ && \
+    echo -e '[local]\nlocalhost' > /etc/ansible/hosts
 
 RUN pip install {{ pip_packages }} --no-cache-dir

@@ -1,25 +1,12 @@
 {
     "os": {
         "fedora": {
-            "os_name": "fedora",
-            "os_version": "28",
-            "os_packages": ["python2-virtualenv", "python2-pip", "git"],
-            "os_tag": "quay.io/soleng/insights-sdk/fedora28",
-            "pkg_manager": "dnf"
-        },
-        "rhel": {
-            "os_name": "rhel",
-            "os_version": "7.5",
-            "os_packages": ["python-virtualenv", "python-setuptools", "git"],
-            "os_tag": "quay.io/soleng/insights-sdk/rhel7.5",
-            "pkg_manager": "yum"
-        },
-        "centos": {
             "os_name": "centos",
             "os_version": "7",
-            "os_packages": ["python-virtualenv", "python-pip", "git"],
-            "os_tag": "quay.io/soleng/insights-sdk/centos7",
-            "pkg_manager": "yum"
+            "os_packages": ["PyYAML", "python-jinja2", "python-httplib2", "python-keyczar", "python-paramiko", "python-setuptools", "git", "python-pip", "sshpass"],
+            "os_dependencies": ["gcc", "libffi-devel", "python-devel", "openssl-devel"],
+            "os_tag": "quay.io/soleng/insights-sdk/fedora28",
+            "pkg_manager": "dnf"
         }
     }
 }
