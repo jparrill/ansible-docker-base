@@ -1,0 +1,12 @@
+{
+    "os": {
+        "fedora": {
+            "os_name": "centos",
+            "os_version": "7",
+            "os_packages": ["PyYAML", "python-jinja2", "python-httplib2", "python-keyczar", "python-paramiko", "python-setuptools", "git", "python-pip", "sshpass"],
+            "os_dependencies": ["gcc", "libffi-devel", "python-devel", "openssl-devel"],
+            "os_tag": "quay.io/soleng/insights-sdk/fedora28",
+            "pkg_manager": "dnf"
+        }
+    }
+}

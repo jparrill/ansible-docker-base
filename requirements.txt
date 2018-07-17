@@ -1,0 +1,5 @@
+ansible-lint
+testinfra
+shade
+etcd
+molecule

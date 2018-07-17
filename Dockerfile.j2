@@ -1,0 +1,16 @@
+FROM {{ os_name }}:{{ os_version }}
+
+MAINTAINER Juan Manuel Parrilla <jparrill@redhat.com>
+
+RUN {{ pkg_manager }} clean all && \
+    {% if os_name == 'centos' %}
+    {{ pkg_manager }} install -y epel-release && \
+    {% endif %}
+    {{ pkg_manager }} install -y {{ os_packages }} && \
+    {{ pkg_manager }} install -y {{ os_dependencies }} && \
+    {{ pkg_manager }} clean all
+
+RUN mkdir /etc/ansible/ && \
+    echo -e '[local]\nlocalhost' > /etc/ansible/hosts
+
+RUN pip install {{ pip_packages }} --no-cache-dir
