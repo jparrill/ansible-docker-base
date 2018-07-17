@@ -23,3 +23,7 @@ If your base release are Ansible 2.0 you cannot install a 1.9 version of Ansible
 Hope this be useful for you.
 
 Enjoy!.
+
+## Update
+
+Spec files revamped, now the __builder.py__ script based will get all ansible versions from pip and create the Dockerfiles in the proper folder waiting for a DockerHub build.
